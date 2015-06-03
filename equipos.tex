@@ -6,6 +6,7 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{mathtools}
 \title{Equipos e Instalaciones Eléctricas Aeronáuticas}
 \author{Leandro Marsó}
 \date{2015}
@@ -113,12 +114,95 @@ El vector $\vec{E}$ en unidades S.I. es: newtons por coulomb (N/C). Observe que 
 \pagebreak
 
 
-	\subsection{Inducción y líneas de fuerza}
-	\subsection{Trabajo y energía eléctrica}
-	\subsection{Diferencia de potencial}
-	\subsection{Capacitores}
+%	\subsection{Inducción y líneas de fuerza}
+%	\subsection{Trabajo y energía eléctrica}
+\subsection{Potencial eléctrico}
+\subsubsection{Diferencia de potencial y potencial eléctrico en campos eléctricos uniformes}
 
+Cuando se coloca una carga de prueba $q_i$ en un campo eléctrico \textbf{E} producido por alguna una distribución uniforme de carga fuente, la fuerza eléctrica que actúa sobre ella es $q_iE$. La fuerza $q_iE$ es conservativa, ya que la fuerza entre cargas descrita por la ley de Coulomb es conservativa. Cuando se traslada la carga de prueba por algún agente externo en el campo, el trabajo consumido por el campo en la carga es igual al trabajo invertido por el agente externo que origina el desplazamiento, pero con signo negativo. Esto es semejante a lo que se presenta cuando se levanta un objeto con masa en un campo gravitacional: el trabajo invertido por el agente externo es igual pero de signo opuesto a el trabajo consumido por la fuerza gravitacional.
+
+\begin{center}
+	\includegraphics[scale=0.25]{figuras/distribucion-uniforme.pdf}
+	\captionof{figure}{\emph{Distribución uniforme de cargas crean un campo eléctrico uniforme}.}
+\label{fig:cargasneg}
+\end{center}
+
+Si por ejemplo,  hasta un lugar cercano del origen del campo, la energía potencial de esta carga de prueba en este campo es $U$.
+
+Para un desplazamiento de distancia $d$ de una carga puntual $q_i$ inmersa en un campo eléctrico uniforme, el trabajo realizado por un campo eléctrico sobre la misma es $Fd = q_i\vec{E}d$. Conforme el campo consume esta cantidad de trabajo, la energía potencial del 
+sistema carga-campo cambia en una cantidad $ \Delta U = -q_i \vec{E}d$.
+
+Para un desplazamiento de $d$ de la carga desde un punto \textbf{A} al punto \textbf{B} el cambio en energía potencial del sistema es:
+$$ \Delta U = -q_i (E_B - E_A)d$$
+
+	\subsection{Diferencia de potencial}
+Si dividimos el cambio de energía potencial, por la carga de prueba obtenemos lo que se conoce como \textbf{diferencia de potencial} entre el punto A y B, debido al campo eléctrico. La ecuación entonces es:
+
+$$ \Delta V = \frac{\Delta U}{q_i} = -(E_B - E_A)d $$ 
+
+\subsection{Capacitores}
+Los capacitores son uno de los tres elementos simples de circuitos que se interconectan mediante alambres para formar un circuito eléctrico. Los circuitos eléctricos son la base de la gran mayoría de los dispositivos que se utilizan el día de hoy. 
+Los capacitores, dispositivos que almacenan carga eléctrica.
+
+
+Los capacitores se usan de manera regular en diversidad de circuitos eléctricos. Por ejemplo, se usan para sintonizar la frecuencia de los receptores de radio, en filtros de fuentes de energía eléctrica, y para eliminar las chispas en los sistemas de magnetos  para el encendido de los motores alternativos de aviación.
+
+\subsubsection*{Definición de la capacitancia}
+
+Considere dos conductores como se observa en la figura \ref{fig:capa12}. Esta combinación de dos conductores se conoce como capacitor. Los conductores son las placas. Si los conductores llevan carga de igual magnitud y signo opuesto existe una diferencia de potencial $\Delta V$ entre ellos.
+
+
+\begin{center}
+	\includegraphics[scale=0.25]{figuras/capacitor12v}
+	\captionof{figure}{\emph{Capacitor de placas paralas conectado a una batería de 12V}.}
+\label{fig:capa12}
+\end{center}
+
+¿Qué determina cuánta carga existe en las placas de un capacitor para cierto voltaje? Los experimentos han demostrado que la cantidad de carga $Q$ en un capacitor es linealmente proporcional a la diferencia de potencial entre los conductores; es decir $Q \propto \Delta V$
+
+La constante de proporcionalidad depende de la forma y separación de los conductores. Esta relación se escribe como $Q = C \Delta V$ si define la capacitancia de la siguiente manera:
+
+La \textbf{capacitancia} C de un capacitor se define como la relación de la magnitud de
+la carga en cualquiera de los conductores a la magnitud de la diferencia de potencial
+entre dichos conductores:
+$$C \equiv \frac{Q}{\Delta V}$$
+
+
+La unidade del SI para capacitancia es el \textbf{Farad} (F), y se define como $$1~\textrm{F} = 1~ \textrm{C}/\textrm{V}$$
+
+
+
+\pagebreak
 \section{Corriente Eléctrica}
+\subsubsection{Naturaleza de la corriente eléctrica}
+Consideremos un cuerpo A cargado negativamente debido a un exceso de electrones y un cuerpo B en estado neutro (figura \ref{fig:corriente}).
+
+Unamos estos dos cuerpos por un hilo conductor. Los electrones en exceso en A atraviesan el hilo conductor hacia el cuerpo B hasta que los dos cuerpos equilibran sus cargas. Este flujo de electrones se denomina corriente eléctrica.
+
+
+
+\begin{center}
+	\includegraphics[scale=0.5]{figuras/corriente}
+	\captionof{figure}{\emph{Corriente eléctrica de electrones de un cuerpo a otro para llegar al equilibrio}.}
+\label{fig:corriente}
+\end{center}
+
+Una corriente eléctrica, o simplemente \emph{corriente} está constituida por un conjunto de electrones en movimiento. Y también, todo electrón en movimiento puede ser considerado como una corriente en movimiento.
+
+El conjunto por donde circulan los electrones se denomina \emph{circuito eléctrico}. Por convención, el sentido de la corriente eléctrica se indica en el sentido opuesto al sentido de la corriente real de electrones.
+
+\subsubsection*{Intensidad de una corriente eléctrica}
+Se llama intensidad $I$ de la corriente eléctrica a la carga que atraviesa una sección recta de un conductor en la unidad de tiempo. La unidad de intensidad de corriente en SI es el Amper (A), que corresponde a un flujo de cargas de un Coulomb por segundo:
+$$ 1~\textrm{A} = 1~\textrm{C}/s $$
+
+O dicho de otra forma, la intensidad $I$ es:
+
+$$ I = \frac{Q (\text{carga que atraviesa una sección del conductor})}{t(\text{tiempo que emplea la carga en pasar})}$$
+
+\pagebreak
+
+
+
 \section{Magnetismo}
 \section{Mediciones}
 \section{Fuentes de alimentación}
